@@ -24,16 +24,16 @@
 	[commandCenter.seekBackwardCommand addTarget:self action:@selector(onSeekBackward:)];
 }
 
-- (void)onPause:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"pause"]; }
-- (void)onPlay:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"play"]; }
-- (void)onStop:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"stop"]; }
-- (void)onTogglePlayPause:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"togglePlayPause"]; }
-- (void)onEnableLanguageOption:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"enableLanguageOption"]; }
-- (void)onDisableLanguageOption:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"disableLanguageOption"]; }
-- (void)onNextTrack:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"nextTrack"]; }
-- (void)onPreviousTrack:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"previousTrack"]; }
-- (void)onSeekForward:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"seekForward"]; }
-- (void)onSeekBackward:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"seekBackward"]; }
+- (MPRemoteCommandHandlerStatus)onPause:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"pause"]; return MPRemoteCommandHandlerStatusSuccess; }
+- (MPRemoteCommandHandlerStatus)onPlay:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"play"]; return MPRemoteCommandHandlerStatusSuccess; }
+- (MPRemoteCommandHandlerStatus)onStop:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"stop"]; return MPRemoteCommandHandlerStatusSuccess; }
+- (MPRemoteCommandHandlerStatus)onTogglePlayPause:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"togglePlayPause"]; return MPRemoteCommandHandlerStatusSuccess; }
+- (MPRemoteCommandHandlerStatus)onEnableLanguageOption:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"enableLanguageOption"]; return MPRemoteCommandHandlerStatusSuccess; }
+- (MPRemoteCommandHandlerStatus)onDisableLanguageOption:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"disableLanguageOption"]; return MPRemoteCommandHandlerStatusSuccess; }
+- (MPRemoteCommandHandlerStatus)onNextTrack:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"nextTrack"]; return MPRemoteCommandHandlerStatusSuccess; }
+- (MPRemoteCommandHandlerStatus)onPreviousTrack:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"previousTrack"]; return MPRemoteCommandHandlerStatusSuccess; }
+- (MPRemoteCommandHandlerStatus)onSeekForward:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"seekForward"]; return MPRemoteCommandHandlerStatusSuccess; }
+- (MPRemoteCommandHandlerStatus)onSeekBackward:(MPRemoteCommandHandlerStatus*)event { [self sendEvent:@"seekBackward"]; return MPRemoteCommandHandlerStatusSuccess; }
 
 
 /**
